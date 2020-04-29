@@ -16,6 +16,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.2" />
   </ItemGroup>
-
+  <ItemGroup>
+  <RepositoryUrl>https://github.com/daviderusso1984/BlazorFlex</RepositoryUrl> 
+    <RepositoryType>git</RepositoryType> 
+</ItemGroup>
   
 </Project>
