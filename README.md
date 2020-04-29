@@ -19,8 +19,7 @@ Wrap => flex-wrap: wrap;
 
 example:
 ```
-<BFlexbox Direction="Directions.row" Horizontal_aling="Horizontal_alings.center"
-Vertical_align="Vertical_aligns.center" Wrap="true">
+<BFlexbox Direction="Directions.row" Horizontal_aling="Horizontal_alings.center" Vertical_align="Vertical_aligns.center" Wrap="true">
     <div>Testo</div>
     <div>Testo</div>
     <div>Testo</div>
