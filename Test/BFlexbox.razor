@@ -1,0 +1,107 @@
+@namespace Test
+
+<div class="@uscita">
+ @ChildContent
+</div>
+
+   
+   
+
+
+@code{
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public Directions Direction { get; set; }=Directions.row;
+
+    [Parameter]
+    public Vertical_aligns Vertical_align { get; set; }=Vertical_aligns.start;
+
+    [Parameter]
+    public Horizontal_alings Horizontal_aling { get; set; }= Horizontal_alings.start;
+
+    [Parameter]
+    public Boolean Wrap {get;set;}=false;
+
+
+    private string uscita { get; set; } = "";
+
+    protected override void OnInitialized () {
+        uscita = "base ";
+        tipo ();
+        vertical();
+        horizontal();
+        if(Wrap){
+            uscita += "flex-container-wrap ";
+        }
+    }
+
+    private void tipo () {
+        switch (Direction) {
+            case Directions.column:
+                uscita += "flex-direction-column ";
+                break;
+            case Directions.column_reverse:
+                uscita += "flex-direction-column-reverse ";
+                break;
+            case Directions.row:
+                uscita += "flex-direction-row ";
+                break;
+            case Directions.row_reverse:
+                uscita += "flex-direction-row-reverse ";
+                break;           
+            default:
+                break;
+        }
+    }
+
+    private void horizontal(){
+         switch (Horizontal_aling) {
+            case Horizontal_alings.center:
+                uscita += "flex-justify-center ";
+                break;
+            case Horizontal_alings.end:
+                uscita += "flex-justify-end ";
+                break;
+            case Horizontal_alings.space_around:
+                uscita += "flex-justify-space-around ";
+                break;
+            case Horizontal_alings.space_between:
+                uscita += "flex-justify-space-between ";
+                break;
+            case Horizontal_alings.start:
+                uscita += "flex-justify-start ";
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void vertical(){
+         switch (Vertical_align) {
+            case Vertical_aligns.baseline:
+                uscita += "flex-aling-baseline ";
+                break;
+            case Vertical_aligns.center:
+                uscita += "flex-aling-center ";
+                break;
+            case Vertical_aligns.end:
+                uscita += "flex-aling-end ";
+                break;
+            case Vertical_aligns.start:
+                uscita += "flex-aling-start ";
+                break;
+            case Vertical_aligns.stretch:
+                uscita += "flex-aling-stretch ";
+                break;
+            default:
+
+                break;
+        }
+    }
+
+   
+    
+    
+}

@@ -1,0 +1,102 @@
+﻿
+.my-component {
+    border: 2px dashed red;
+    padding: 1em;
+    margin: 1em 0;
+    background-image: url('background.png');
+}
+
+.test {
+    background-color: #50d712;
+    width: 100px;
+    height: 100%;
+    margin: 1px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.base {
+    display: flex;
+    height: auto;
+    width: auto;
+    
+}
+
+
+
+.flex-container-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-justify-space-around {
+    justify-content: space-around;
+}
+
+.flex-justify-space-between {
+    justify-content: space-between;
+}
+
+.flex-justify-start {
+    justify-content: flex-start;
+}
+
+.flex-justify-end {
+    justify-content: flex-end;
+}
+
+.flex-aling-center {
+    align-items: center;
+}
+
+.flex-aling-start {
+    align-items: flex-start;
+}
+
+.flex-aling-end {
+    align-items: flex-end;
+}
+
+.flex-aling-stretch {
+    align-items: stretch;
+}
+
+.flex-aling-baseline {
+    align-items: baseline;
+}
+
+@media screen and (max-width: 700px) {
+
+    .flex-direction-row {
+        flex-flow: column nowrap !important;
+    }
+
+    .flex-direction-row-reverse {
+        flex-flow: column nowrap !important;
+    }
+
+    .cell_base {
+        flex: 1 1 auto !important;
+        width: 100%;
+    }
+}

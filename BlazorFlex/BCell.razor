@@ -1,0 +1,65 @@
+@namespace BlazorFlex
+
+<div class="@uscita" style="@stile">
+    @ChildContent
+</div>
+
+
+
+
+@code{
+    [Parameter]
+    public int Order { get; set; } = 0;
+
+    [Parameter]
+    public string Width { get; set; } = "";
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    private string uscita { get; set; }
+
+    private string stile { get; set; }
+
+    protected override void OnInitialized()
+    {
+        uscita = "cell_base ";
+        stile = "";
+        ordine();
+        dimensione();
+    }
+
+    private void dimensione()
+    {
+        if (string.IsNullOrWhiteSpace(Width))
+        {
+            return;
+        }
+        if (Width.Contains("px"))
+        {
+            stile += "flex-basis: " + Width + ";";
+            return;
+        }
+        if (Width.Contains("%"))
+        {
+            stile += "flex: " + Width + ";";
+            return;
+        }
+        int num = 0;
+        try
+        {
+            num = Convert.ToInt32(Width);
+        }
+        catch (System.Exception)
+        {
+
+            throw;
+        }
+        stile += "flex: " + Width.ToString() + ";";
+    }
+
+    private void ordine()
+    {
+        stile += "order: " + Order.ToString() + ";";
+    }
+}
