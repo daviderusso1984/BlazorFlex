@@ -10,7 +10,9 @@ Or
  dotnet add package BlazorFlex
  
  Include in index.html 
+ ```
  <link href="_content/BlazorFlex/styles.css" rel="stylesheet" />  
+ ```
 
 Use
 
