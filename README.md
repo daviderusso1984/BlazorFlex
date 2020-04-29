@@ -7,7 +7,7 @@ To Install
  
 Or
 
- dotnet add package BlazorFlex --version 0.2.0
+ dotnet add package BlazorFlex
 
 Use
 
